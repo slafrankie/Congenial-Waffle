@@ -1,6 +1,10 @@
-import java.util.Scanner;
+import java.util.Scanner;  
 //Stephen LaFrankie
 public class slA23
+/*main class acts as control method for this encryption/inheritance program.
+  Prompts user for a made-up password and passes it to a string. From there
+  the string is then passed to a and b and sent to the assigned locations.
+*/
 {
 	public static void main(String[] args)
 	{
@@ -13,8 +17,10 @@ public class slA23
 
 		Secret a = new Secret(pass);
 		password b = new password(pass);
+                
+                //both secret and password classes essentially do the same thing
 
-		a.encrypt();
+		a.encrypt(); 
 		System.out.println(a);
 		a.decrypt();
 		System.out.println(a);

@@ -1,6 +1,6 @@
 //Stephen LaFrankie
 import java.util.Random;
-public class password implements Encryptable
+public class password implements Encryptable 
 {
 	Random r = new Random();
 	private String password;
@@ -18,10 +18,10 @@ public class password implements Encryptable
 	{
 		if(!encrypt)
 		{
-			masked = "";
+			String masked = "";
 			for(int n = 0; n<password.length(); n++)
 			{
-
+				masked = masked + (char)(password.charAt(index)+add);
 			}
 			password = masked;
 			encrypt = true;
@@ -35,7 +35,7 @@ public class password implements Encryptable
 			String unmasked = "";
 			for(int n = 0; n<password.length(); n++)
 			{
-
+				unmasked = unmasked + (char)(password.charAt(n)-add)
 			}
 			password = unmasked;
 			encrypt = true;
